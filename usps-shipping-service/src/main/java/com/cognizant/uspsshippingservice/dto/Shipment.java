@@ -11,15 +11,15 @@ import java.util.Objects;
 public class Shipment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private int id;
     private int trackingNumber;
     private String name;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -44,8 +44,8 @@ public class Shipment {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Shipment shipment = (Shipment) o;
-        return trackingNumber == shipment.trackingNumber &&
-                Objects.equals(id, shipment.id) &&
+        return id == shipment.id &&
+                trackingNumber == shipment.trackingNumber &&
                 Objects.equals(name, shipment.name);
     }
 

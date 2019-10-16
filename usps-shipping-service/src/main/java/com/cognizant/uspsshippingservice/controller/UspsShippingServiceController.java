@@ -1,8 +1,8 @@
 package com.cognizant.uspsshippingservice.controller;
 
-/*Task:
- *
- */
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class UspsShippingServiceController {
 
 }
